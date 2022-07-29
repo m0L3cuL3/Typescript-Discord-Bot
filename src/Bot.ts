@@ -1,8 +1,9 @@
+require('dotenv').config()
 import { Client } from 'discord.js'
 import interactionCreate from './listeners/interactionCreate'
 import ready from './listeners/ready'
 
-const token = 'insert token id here'
+const token = process.env.TOKEN_ID
 
 console.log("Bot is starting...")
 
