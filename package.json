@@ -4,7 +4,6 @@
   "description": "Discord Bot writtin in Typescript",
   "main": "Bot.ts",
   "scripts": {
-    "build": "tsc",
     "start": "node dist/Bot.js"
   },
   "author": "Sean Baang",
