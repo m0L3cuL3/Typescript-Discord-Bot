@@ -1,5 +1,4 @@
 import 'dotenv'
-import 'process'
 import { CommandInteraction, Client } from 'discord.js'
 import { Command } from '../Command'
 
