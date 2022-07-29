@@ -1,4 +1,5 @@
-require('dotenv').config({path: '.env'})
+import 'dotenv'
+import 'process'
 import { CommandInteraction, Client } from 'discord.js'
 import { Command } from '../Command'
 
@@ -9,7 +10,7 @@ export const Hello: Command = {
     description: 'Returns a greeting',
     type: 1,
     run: async (client: Client, interaction: CommandInteraction) => {
-        const guild = client.guilds.cache.get('789199594713251870')
+        const guild = client.guilds.cache.get(process.env.GUILD_ID)
 
         let members = await guild?.members.fetch()
         let usernames = members?.map(m => m.user.tag)

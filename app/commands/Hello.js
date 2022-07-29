@@ -7,7 +7,7 @@ exports.Hello = {
     description: 'Returns a greeting',
     type: 1,
     run: async (client, interaction) => {
-        const guild = client.guilds.cache.get('789199594713251870');
+        const guild = client.guilds.cache.get(process.env.GUILD_ID);
         let members = await guild?.members.fetch();
         let usernames = members?.map(m => m.user.tag);
         let list = usernames?.join('\n');
